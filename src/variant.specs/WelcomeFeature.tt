@@ -1,0 +1,23 @@
+﻿<#@ include file="SaveOutput.tt" #>
+<#
+    GenerateFile("A");
+    SaveOutput("features/productA/WelcomeMessage.feature");  
+    GenerateFile("B");
+    SaveOutput("features/productB/WelcomeMessage.feature");  
+    GenerateFile("C");
+    SaveOutput("features/productC/WelcomeMessage.feature");  
+#>
+<#+
+    void GenerateFile(string customer)
+    {
+#>
+@welcome_<#= customer #>
+Feature: Welcome Message
+
+Scenario: see welcome message
+	Given Joe has logged in
+	And Joe navigates to the welcome page
+	Then Joe should see the welcome message "Welcome To Customer <#= customer #>'s Store!"
+<#+
+    }  
+#>
