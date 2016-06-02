@@ -42,10 +42,16 @@ avoids big design up front.
 FOSD is a particular approach to SPLE that focuses strongly on the idea of features
 and their representation througout the entire software lifecycle.
 
-Contents:
+
+Background
+==========
 
 .. toctree::
    :maxdepth: 2
+
+   software_product_line_engineering
+   behaviour_driven_development
+   feature_oriented_software_development
 
 
 
