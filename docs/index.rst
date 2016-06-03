@@ -53,6 +53,14 @@ Background
    behaviour_driven_development
    feature_oriented_software_development
 
+Variability in Gherkin
+======================
+
+.. toctree::
+   :maxdepth: 2
+
+   gherkin-and-variability
+
 Using ApleT
 ===========
 
@@ -63,10 +71,15 @@ Using ApleT
    toolchain
    roles
 
+TODO
+====
+
+.. toctree::
+   todo
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
