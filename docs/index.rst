@@ -71,6 +71,14 @@ Using ApleT
    toolchain
    roles
 
+.NET Web Application Product Lines
+==================================
+
+.. toctree::
+   :maxdepth: 2
+
+   dotnet-webapp-productlines
+
 TODO
 ====
 
