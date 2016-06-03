@@ -53,7 +53,15 @@ Background
    behaviour_driven_development
    feature_oriented_software_development
 
+Using ApleT
+===========
 
+.. toctree::
+   :maxdepth: 2
+
+   process
+   toolchain
+   roles
 
 Indices and tables
 ==================
