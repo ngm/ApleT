@@ -1,5 +1,5 @@
 **********************************
-.NET Web Application Product Lines
+.NET web application product lines
 **********************************
 
 This page is currently a general dumping ground for various
@@ -7,7 +7,7 @@ ways of implementing variability/feature-oriented development
 when it comes to .NET web applications.
 
 What needs composing in an ASP.NET MVC web application?
-===============================================
+=======================================================
 
 * Controllers
 * Routing
@@ -75,7 +75,7 @@ It's intended more for large subsections of an application however, so not
 at the fine-grained level of features.
 
 ASP.NET MVC Portable Areas
-=================
+==========================
 
 https://lostechies.com/erichexter/2012/11/26/portable-areas-3-years-later/
 
