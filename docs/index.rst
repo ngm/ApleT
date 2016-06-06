@@ -14,10 +14,6 @@ ApleT is currently in very early stages of development.  See
 `django-productline <https://django-productline.readthedocs.io/en/latest>`_
 for a much more mature FOSD framework for Django and Python.
 
-###########
-Motivations
-###########
-
 Software product line engineering (SPLE) provides an efficient means to
 produce software that is delivered to multiple customers, in bespoke form,
 derived from a composable, reusable set of assets. Effective use of SPLE can
@@ -43,54 +39,43 @@ avoids big design up front.
 FOSD is a particular approach to SPLE that focuses strongly on the idea of features
 and their representation througout the entire software lifecycle.
 
-
-##########
-Background
-##########
+----
 
 .. toctree::
+   :caption: Background
    :maxdepth: 2
 
    software_product_line_engineering
    behaviour_driven_development
    feature_oriented_software_development
 
-###################
-Variability in BDD
-###################
-
 .. toctree::
+   :caption: Variability in BDD
    :maxdepth: 2
 
    gherkin-and-variability
    variability-step-definitions
    variability-progress-reports
 
-###########
-Using ApleT
-###########
-
 .. toctree::
+   :caption: Using ApleT
    :maxdepth: 2
 
    process
    toolchain
    roles
 
-#############################
-Web Application Product Lines
-#############################
-
 .. toctree::
+   :caption: Web Application Product Lines
    :maxdepth: 2
 
    dotnet-webapp-productlines
    other-webapp-productlines
 
-TODO
-====
-
 .. toctree::
+   :caption: Appendices 
+   :maxdepth: 2
+   
    todo
 
 Indices and tables
