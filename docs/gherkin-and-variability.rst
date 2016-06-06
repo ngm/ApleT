@@ -23,8 +23,9 @@ Given, When and Then steps.
 
 When introducing variability into Gherkin, some questions that arise are:
 
-* How do we represent the variability?
+* How do we represent the variability within the Gherkin file?
 * At what level of granularity do we allow for variability?
+* Can we have abstract features with specification tests, on concrete features only?
 
 Representation
 ==============
@@ -90,6 +91,33 @@ Implementing variability in Gherkin
 
 Build system
 ------------
+
+Using the build system approach, each feature in the feature model can have one associated feature file.
+When a product is configured to include that feature, then the specification tests for that feature
+are included by the build system copying that file into the correct directory from which the feature files
+are run.
+
+Implementation
+^^^^^^^^^^^^^^
+
+We need a way of linking the feature to the feature file.
+And we need part of the build system to be able to copy the files to the correct
+location based on this link.
+
+The simplest link mechanism is having the name of the feature file match exactly the
+name of the feature as gets included in the configuration file produced by the product
+configurator.  Then the build script needs to just search for a file with that name and
+output it to the correct directory.
+
+.. todo:: show an example in FAKE
+
+Considerations
+^^^^^^^^^^^^^^
+
+The granularity of this approach is at the feature level.  
+
+.. todo:: More considerations here
+.. todo:: Does every feature have a feature file?  Only concrete features perhaps?
 
 
 Gherkin tags
