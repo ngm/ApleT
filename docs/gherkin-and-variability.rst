@@ -103,6 +103,7 @@ FeatureHouse
 types of software artifacts.  It allows for the artifacts to be structured in
 feature modules as part of feature-oriented software development.
 
+.. epigraph::
     "FeatureHouse is a general approach to the composition of software
     artifacts. FeatureHouse is language-independent in that software artifacts
     written in various languages can be composed, e.g., source code, test
@@ -113,7 +114,9 @@ feature modules as part of feature-oriented software development.
     three-way merge. FeatureHouse consists of a tool for superimposition,
     called FSTComposer, a tool for three-way merge, called FSTMerge, and a
     plug-in and generation mechanism for integrating new languages
-    automatically, called FSTGenerator." -- http://fosd.net/fh
+    automatically, called FSTGenerator." 
+    
+    -- http://fosd.net/fh
 
 To enable Gherkin for usage within FeatureHouse we are implementing a 
 *feature structure tree* grammar for Gherkin files.

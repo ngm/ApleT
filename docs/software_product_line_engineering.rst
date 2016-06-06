@@ -1,6 +1,6 @@
-=================================
+*********************************
 Software product line engineering
-=================================
+*********************************
 
 Software product line engineering (SPLE) provides an efficient means to
 produce software that is delivered to multiple customers, in bespoke form,
