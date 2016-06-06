@@ -82,19 +82,55 @@ The most fine-grained level would be the arbitrary composition of any piece of
 a feature file, including parts of the individual scenario step descriptions.
 In practice this would be difficult.
 
+.. todo:: give use cases/advice for when different levels of granularity might be required.
+
 
 Implementing variability in Gherkin
 ===================================
 
+Build system
+------------
+
+
+Gherkin tags
+------------
+
+
+FeatureHouse
+------------
+
+`FeatureHouse <http://fosd.net/fh>`_ is a tool that can be used for the composition of various
+types of software artifacts.  It allows for the artifacts to be structured in
+feature modules as part of feature-oriented software development.
+
+    "FeatureHouse is a general approach to the composition of software
+    artifacts. FeatureHouse is language-independent in that software artifacts
+    written in various languages can be composed, e.g., source code, test
+    cases, models, documentation, and makefiles. Software artifacts are
+    represented as feature structure trees (FSTs), which capture the essence of
+    an artifact's modular structure in the form of a tree. As composition
+    paradigm, FeatureHouse supports two approaches: superimposition and
+    three-way merge. FeatureHouse consists of a tool for superimposition,
+    called FSTComposer, a tool for three-way merge, called FSTMerge, and a
+    plug-in and generation mechanism for integrating new languages
+    automatically, called FSTGenerator." -- http://fosd.net/fh
+
+To enable Gherkin for usage within FeatureHouse we are implementing a 
+*feature structure tree* grammar for Gherkin files.
+
+
+Summary
+-------
+
 The table below summarises different approaches to implementing variability in Gherkin
 based on various quality criteria.
 
-+------------------+-------------------+--------------------------------------------------+
-|                  | Gherkin tags      | FeatureHouse                                     |
-+==================+===================+==================================================+
-| *Mechanism*      | Annotation        | Composition                                      |
-+------------------+-------------------+--------------------------------------------------+
-| *Granularity*    | Feature, scenario | Feature, scenario, scenario step                 |
-+------------------+-------------------+--------------------------------------------------+
-| *Learning curve* | Simple            | Understanding feature module packaging mechanism |
-+------------------+-------------------+--------------------------------------------------+
++------------------+--------------+-------------------+--------------------------------------------------+
+|                  | Build system | Gherkin tags      | FeatureHouse                                     |
++==================+==============+===================+==================================================+
+| *Mechanism*      | Annotation   | Annotation        | Composition                                      |
++------------------+--------------+-------------------+--------------------------------------------------+
+| *Granularity*    | Feature      | Feature, scenario | Feature, scenario, scenario step                 |
++------------------+--------------+-------------------+--------------------------------------------------+
+| *Learning curve* | Simple       | Simple            | Understanding feature module packaging mechanism |
++------------------+--------------+-------------------+--------------------------------------------------+
