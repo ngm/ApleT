@@ -81,3 +81,20 @@ An even finer-grain would allow the composition of individual scenario steps.
 The most fine-grained level would be the arbitrary composition of any piece of
 a feature file, including parts of the individual scenario step descriptions.
 In practice this would be difficult.
+
+
+Implementing variability in Gherkin
+===================================
+
+The table below summarises different approaches to implementing variability in Gherkin
+based on various quality criteria.
+
++------------------+-------------------+--------------------------------------------------+
+|                  | Gherkin tags      | FeatureHouse                                     |
++==================+===================+==================================================+
+| *Mechanism*      | Annotation        | Composition                                      |
++------------------+-------------------+--------------------------------------------------+
+| *Granularity*    | Feature, scenario | Feature, scenario, scenario step                 |
++------------------+-------------------+--------------------------------------------------+
+| *Learning curve* | Simple            | Understanding feature module packaging mechanism |
++------------------+-------------------+--------------------------------------------------+
