@@ -55,14 +55,16 @@ Background
    behaviour_driven_development
    feature_oriented_software_development
 
-######################
-Variability in Gherkin
-######################
+###################
+Variability in BDD
+###################
 
 .. toctree::
    :maxdepth: 2
 
    gherkin-and-variability
+   variability-step-definitions
+   variability-progress-reports
 
 ###########
 Using ApleT
