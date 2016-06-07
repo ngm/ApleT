@@ -53,6 +53,7 @@ and their representation througout the entire software lifecycle.
    :caption: Variability in BDD
    :maxdepth: 2
 
+   variability-concepts
    gherkin-and-variability
    variability-step-definitions
    variability-progress-reports

@@ -26,54 +26,27 @@ follows (excellent ninja example from http://pythonhosted.org/behave/tutorial.ht
         When attacked by Chuck Norris
         Then the ninja should run for his life
 
-When introducing variability into Gherkin, some questions that arise are:
+When introducing variability into Gherkin, we can make use of
+some of the variability concepts described in :ref:`variability-concepts`.
 
-* How do we represent the variability within the Gherkin file?
+* How do we :ref:`represent <variability-concepts-representation>` the variability within the Gherkin file?
 * At what level of granularity do we allow for variability?
 * Can we have abstract features with specification tests, on concrete features only?
 
 Representation
 ==============
 
-There are different ways to represent variability within an artefact.
-The two approaches used widely in practice are *annotation-based* and
-*composition-based*.
+An annotation-based approach involves marking up the Gherkin file in some way
+with the feature the parts of the Gherkin file is associated with.
+It also requires a way of ensuring that the correct parts of the Gherkin
+specifications are executed when the feature corresponding to a particular
+annotation are selected in a product configuration.
 
-Annotation-based approach
--------------------------
-
-In the annotation-based approach, artefacts are marked up in some way
-with annotations which determine what feature that part of the artefact
-belongs to.
-
-A very common example of this is code implementations is the use of 
-preprocessor directives such as #ifdefs.
-
-In the context of Gherkin, tags could potentially be used for annotation.
-
-.. todo:: describe how annotation of Gherkin files would work.
-
-Composition-based approach
---------------------------
-
-In the composition-based approach, the parts of an artefact corresponding
-to a particular feature are contained within a dedicated file, container or
-module.
-
-In code, there are various ways to achieve a composition-based approach, such
-as design patterns, frameworks and plugins.
-
-In the context of Gherkin, feature files could be composed by combining scenarios
-and scenario steps.
-
-.. todo:: more detail on composition-based approach for Gherkin.  
 
 Granularity
 ===========
 
-.. todo:: give generalised description of granularity.
-
-Granularity in the context of Gherkin refers to at what level elements of the
+:ref:`Granularity <variability-concepts-granularity>` in the context of Gherkin refers to at what level elements of the
 Gherkin file we might wish to override or combine based on feature selections.
 
 A course-grained granularity would mean we simply combine together full feature
