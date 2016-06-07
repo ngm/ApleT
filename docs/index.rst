@@ -3,12 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ApleT's documentation!
-=================================
+Agile product line engineering Toolkit
+======================================
+
+.. image:: _static/apleT-logo.png
+   :align: right
+   :scale: 50%
 
 ApleT is a framework for performing agile product line engineering, particularly with
 .NET web applications and a behaviour-driven development approach in mind.
 ApleT follows the *feature-oriented software development* (FOSD) methodology.
+
 
 ApleT is currently in very early stages of development.  See 
 `django-productline <https://django-productline.readthedocs.io/en/latest>`_
