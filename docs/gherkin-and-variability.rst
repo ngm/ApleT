@@ -2,24 +2,29 @@
 Variability in Gherkin
 **********************
 
-Gherkin feature files look as follows::
+As discussed in the section on :ref:`gherkin`, Gherkin
+is a business-readable DSL for specifying system behaviour.
 
-    Feature: Calculator
+An example of feature specifications in a Gherkin feature file looks as 
+follows (excellent ninja example from http://pythonhosted.org/behave/tutorial.html#feature-files):
 
-    In order to avoid silly mistakes
-    As a math idiot
-    I want to be told the sum of two numbers
+.. code-block:: gherkin
 
-    @mytag
-    Scenario: Add two numbers
-       Given I have entered 50 into the calculator
-       And I have also entered 70 into the calculator
-       When I press add
-       Then the result should be 120 on the screen
+    Feature: Fight or flight
 
-They describe a feature with a name and description.  These features
-are broken down into scenarios, which are further broken down into
-Given, When and Then steps.
+    In order to increase the ninja survival rate,
+    As a ninja commander
+    I want my ninjas to decide whether to take on an opponent based on their skill levels
+
+    Scenario: Weaker opponent
+        Given the ninja has a third level black-belt
+        When attacked by a samurai
+        Then the ninja should engage the opponent
+
+    Scenario: Stronger opponent
+        Given the ninja has a third level black-belt
+        When attacked by Chuck Norris
+        Then the ninja should run for his life
 
 When introducing variability into Gherkin, some questions that arise are:
 
