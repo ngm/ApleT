@@ -4,6 +4,8 @@ The ApleT Toolchain
 
 The ApleT process defines a number of tools that are required.
 
+.. image:: _static/aplet-tools.png
+
 These are as follows:
 
 * Feature Modelling Tool.
@@ -36,6 +38,8 @@ combination of these.
 Reference implementation of ApleT in .NET
 =========================================
 
+.. image:: _static/aplet-tools-arc.png
+
 * Feature Modelling Tool = Feature Model DSL.
 * Product Configurator = Feature Model DSL.
 * Feature File Composer = FeatureHouse.
@@ -43,3 +47,10 @@ Reference implementation of ApleT in .NET
 * CI Server = Jenkins.
 * Spec Runner = SpecFlow.
 * Report Generator = Pickles.
+
+
+Example Java toolchain for ApleT
+================================
+
+.. image:: _static/aplet-tools-java.png
+

@@ -2,7 +2,7 @@
 Variability in Gherkin
 **********************
 
-As discussed in the section on :ref:`gherkin`, Gherkin
+As discussed in the section on :ref:`bdd-gherkin`, Gherkin
 is a business-readable DSL for specifying system behaviour.
 
 An example of feature specifications in a Gherkin feature file looks as 

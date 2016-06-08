@@ -1,4 +1,4 @@
-.. _behaviour-driven-development:
+.. _bdd:
 
 ****************************
 Behaviour-driven development
@@ -8,7 +8,7 @@ Behaviour-driven development (BDD) is an agile software development methodology
 focused on specifying and testing software through business-focused examples.
 
 
-.. _gherkin:
+.. _bdd-gherkin:
 
 Gherkin
 =======
@@ -42,3 +42,48 @@ Given, When and Then steps.
 
 There are many more components to a Gherkin feature file.  For more information
 please see the `Gherkin reference <https://cucumber.io/docs/reference#gherkin>`_.
+
+
+
+.. _bdd-step-definitions:
+
+Step definition code
+====================
+
+Step definition code is a layer of code that is automatically executed when the specification
+tests are run.
+
+Each individual step maps to a method within the step definition code.  When a scenario within
+a feature that contains the corresponding step for the step definition is run, this will execute
+the method within the step definition code.
+
+.. code-block:: csharp
+
+        [Given("the ninja has a third level black-belt")]
+        public void GivenTheNinjaHasAThirdLevelBlackBelt()
+        {
+                // ...
+        }
+
+        [When("attacked by a samurai")]
+        public void WhenAttackedByASamuari()
+        {
+                // ...
+        }
+
+        [Then("the ninja should engage the opponent")]
+        public void ThenNinjaShouldEngageOpponent()
+        {
+                // ...
+        }
+
+
+Progress reports
+================
+
+When specification tests are run, progress reports are produced.  These reports show
+the status of the implementation of the features within the product.
+
+.. todo:: image of progress report
+
+.. todo:: pickles
