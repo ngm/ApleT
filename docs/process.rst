@@ -1,3 +1,5 @@
+.. _aplet-process:
+
 The ApleT Process
 =================
 

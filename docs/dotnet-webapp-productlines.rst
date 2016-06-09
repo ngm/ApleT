@@ -1,3 +1,5 @@
+.. _dotnet-aplet:
+
 **********************************
 .NET web application product lines
 **********************************

@@ -70,6 +70,7 @@ and their representation througout the entire software lifecycle.
    process
    toolchain
    roles
+   aplet-example
 
 .. toctree::
    :caption: Web Application Product Lines
