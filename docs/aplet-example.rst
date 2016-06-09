@@ -19,7 +19,6 @@ The feature model of the full TodoMonkey Product Line looks like this:
 .. image:: _static/todomonkey-featuremodel.png
 
 Feature base is mandatory (filled circle). All other features are optional(empty circle). However, feature search depends on feature filter.
-Description of individual features
 
 base   
     provides a basic todo list. Items can be added. Items have a label and can be marked as done.
