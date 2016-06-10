@@ -68,9 +68,9 @@ and their representation througout the entire software lifecycle.
    :caption: Using ApleT
    :maxdepth: 2
 
-   process
-   toolchain
-   roles
+   aplet-process
+   aplet-toolchain
+   aplet-roles
    aplet-example
 
 .. toctree::
@@ -85,6 +85,7 @@ and their representation througout the entire software lifecycle.
    :maxdepth: 2
    
    todo
+   notes
 
 Indices and tables
 ==================

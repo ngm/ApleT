@@ -1,3 +1,5 @@
+.. _aplet-roles:
+
 ApleT Roles
 ===========
 
