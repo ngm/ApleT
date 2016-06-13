@@ -125,5 +125,30 @@ We are now able to run the build within Jenkins, which produces a progress repor
 .. image:: _static/todomonkey-jenkins-progressreport.png
     :align: center
 
+As we can see, the status of the specification tests is 'pending' - we haven't written
+any test layer code yet.
 
-Now we can start writing some code!
+Writing the test layer code
+---------------------------
+
+We want to write the test layer code that tests our production system.
+
+We have a lot of freedom in how we write this test code -- it could be full 
+end-to-end tests, where we exercise the entire system from the interface by
+automation, or it could be a lower level integration test that might avoid
+the interface.  Interface automation has its benefits and its pitfalls --
+one main benefit being we know we are exercising the system as a user would.
+However if not carefully written, automation tests can be brittle.  And they
+can be slow to execute, which leads to issues of scale.
+
+.. todo:: more discussion of automation testing vs lower level
+
+We're going to write tests that bypass the interface for now.
+We're going to test our first scenario.
+
+.. code-block:: gherkin
+
+    When I create a new todo item named 'Buy milk'
+    Then the new todo item should be in my todolist
+
+
