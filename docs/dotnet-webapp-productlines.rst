@@ -92,3 +92,14 @@ artefacts (it seems to be runtime composition?), but it seems to have definite
 similarities with the idea of feature modules in FOSD.  
 
 https://lostechies.com/josharnold/2011/09/05/modularity-via-bottles/
+
+OrchardCMS
+==========
+
+Orchard builds on top of ASP.NET MVC and has the idea of extensibility via
+modules built into it from the ground up.
+
+Behind the scenes, Orchard modules are built on top of the ASP.NET MVC Areas
+mechanism.
+
+http://docs.orchardproject.net/en/latest/Documentation/How-Orchard-works/
