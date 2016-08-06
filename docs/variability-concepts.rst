@@ -107,7 +107,6 @@ in control flow, and variability in data.
 Uniformity
 ----------
 
-----
 
 The SPLE book provides some other quality criteria within
 its section on product line testing strategies.
