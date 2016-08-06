@@ -72,6 +72,9 @@ a configuration file.
 Run-time binding can take into account real-time changes in the context of the application.
 
 
+
+
+
 .. _variability-concepts-qualitycriteria:
 
 Quality Criteria
@@ -80,5 +83,37 @@ Quality Criteria
 
 .. _variability-concepts-granularity:
 
+The FOSD book defines 6 quality criteria against which
+we can evaluation our variability mechanisms.
+
+Preplanning effort
+------------------
+
+Feature traceability
+--------------------
+
+Separation of concerns
+----------------------
+
+Information hiding
+------------------
+
 Granularity
 -----------
+
+Types of variability supported could be: variability in function, variability
+in control flow, and variability in data.
+
+Uniformity
+----------
+
+----
+
+The SPLE book provides some other quality criteria within
+its section on product line testing strategies.
+
+Learning effort
+---------------
+
+Overhead
+--------

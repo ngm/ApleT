@@ -60,9 +60,8 @@ and their representation througout the entire software lifecycle.
    :maxdepth: 2
 
    variability-concepts
-   gherkin-and-variability
-   variability-step-definitions
-   variability-progress-reports
+   variability-bdd-components
+   variability-implementation-techniques
 
 .. toctree::
    :caption: Using ApleT
