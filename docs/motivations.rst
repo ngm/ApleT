@@ -43,6 +43,16 @@ Why do we need to incorporate behaviour-driven development?
      -- Krzysztof Czarnecki, foreword to *Feature-Oriented Software Product Lines* [Apel2013]_
 
 
+We wish to combine the benefits of BDD, SPLE and FOSD.
+
+.. epigraph::
+
+     "the idea of variability-aware analysis is not to invent new knds of analysis
+      techniques, but to *lift* existing analysis techniques developed for individual
+      programs to entire product lines (that is, to domain artifacts).” 
+      
+     -- Feature-Oriented Software Product Line, p.261 [Apel2013]_
+
 .. rubric:: References
 
 .. [Apel2013] Apel, S., Batory, D., Kastner, C., & Saake, G. (2013). Feature-oriented software product lines: concepts and implementation. Springer Berlin / Heidelberg.

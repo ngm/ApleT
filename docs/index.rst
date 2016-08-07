@@ -55,6 +55,8 @@ and their representation througout the entire software lifecycle.
    behaviour_driven_development
    feature_oriented_software_development
 
+   aplet-benefits
+
 .. toctree::
    :caption: Variability in BDD
    :maxdepth: 2

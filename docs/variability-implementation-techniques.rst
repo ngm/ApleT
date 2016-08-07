@@ -41,7 +41,7 @@ c.f. PLUC
 Annotation by feature
 =====================
 
-c.f. PLUSS
+c.f. PLUSS [Eriksson2005]_
 
 Feature module composition
 ==========================
@@ -75,7 +75,6 @@ Modeling scenario variability as crosscutting mechanisms
 `An aspect-oriented approach to variability in use case scenarios <http://dl.acm.org/citation.cfm?id=1509239.1509258>`_ [Bonifacio2009]_.
 
 
-
 Aspectual feature modules
 =========================
 
@@ -98,7 +97,8 @@ based on various quality criteria.
 | *Learning curve* | Simple       | Simple            | Understanding feature module packaging mechanism |
 +------------------+--------------+-------------------+--------------------------------------------------+
 
-References
-==========
+
+.. rubric:: References
 
 .. [Bonifacio2009] Bonifácio, R. and Borba, P. (2009). Modeling scenario variability as crosscutting mechanisms. In Proceedings of the 8th ACM international conference on Aspect-oriented software development (AOSD '09). ACM, New York, NY, USA, 125-136. DOI=http://dx.doi.org/10.1145/1509239.1509258
+.. [Eriksson2005] Eriksson, M., Börstler, J, and Borg, K. (2005). The PLUSS approach: domain modeling with features, use cases and use case realizations. In Proceedings of the 9th international conference on Software Product Lines (SPLC'05), Henk Obbink and Klaus Pohl (Eds.). Springer-Verlag, Berlin, Heidelberg, 33-44. DOI=http://dx.doi.org/10.1007/11554844_5
