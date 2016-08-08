@@ -61,6 +61,7 @@ and their representation througout the entire software lifecycle.
    :caption: Variability in BDD
    :maxdepth: 2
 
+   variability-linking-features-to-bdd
    variability-concepts
    variability-bdd-components
    variability-implementation-techniques

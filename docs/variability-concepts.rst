@@ -1,8 +1,15 @@
 .. _variability-concepts:
 
-********************
-Variability concepts
-********************
+***********************************************
+Categorising ways to make BDD variability-aware
+***********************************************
+
+This section introduces some ideas and terminology related to variability
+implementation mechanisms, with a focus on requirements artifacts and test
+artifacts.  With these terms we can categorise and evaluate different
+mechanisms.
+
+----
 
 The FOSD book describes three main dimensions of variability mechanisms:
 binding time, representation, and technology, and quality criteria that
