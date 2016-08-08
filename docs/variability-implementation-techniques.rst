@@ -33,10 +33,49 @@ The granularity of this approach is at the feature level.
 .. todo:: More considerations here
 .. todo:: Does every feature have a feature file?  Only concrete features perhaps?
 
+
 Annotation by product
 =====================
 
+A simple annotation-based approach is to tag each feature file or scenario
+with the name of the customer(s) to which it applies.
+
+.. code-block:: gherkin
+
+    @customer1 @customer2
+    Feature: Add Todo
+
+    @customer1 @customer2
+    Scenario: User adds valid todo
+        Given the user has input the label 'Take over the world'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    @customer2
+    Scenario: User adds a todo with a description
+        Given the user has input the label 'Take over the world'
+        And the user has input the description 'Same as every night'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    @customer1 @customer2
+    Scenario: User adds invalid todo
+        Given the user has left the label blank
+        When the user submits the todo
+        Then the user should prompted to add a label
+
+This simplifies the running of the tests from the build scripts.
+We only need to pass the product/customer name as a filter to the tests, and 
+the test runner will run only the scenarios that apply to this product/customer.
+
+However, with this approach, all variability is contained implicitly within the 
+feature files.  There is no explicit representation of variability in a 
+variability model.  Any configuration of the product line for a particular
+customer means going through each feature file and tagging the features and
+scenarios that apply for the new customer.
+
 c.f. PLUC
+
 
 Annotation by feature
 =====================
