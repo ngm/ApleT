@@ -159,17 +159,70 @@ feature modules as part of feature-oriented software development.
 To enable Gherkin for usage within FeatureHouse we are implementing a 
 *feature structure tree* grammar for Gherkin files.
 
+.. code-block:: gherkin
+    :caption: AddTodo.feature in AddTodo feature module
+
+    Feature: Add Todo
+
+    Scenario: User adds valid todo
+        Given the user has input the label 'Take over the world'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    Scenario: User adds invalid todo
+        Given the user has left the label blank
+        When the user submits the todo
+        Then the user should prompted to add a label
+
+.. code-block:: gherkin
+    :caption: AddTodo.feature in TodoDescription feature module
+
+    Feature: Add Todo
+
+    Scenario: User adds a todo with a description
+        Given the user has input the label 'Take over the world'
+        And the user has input the description 'Same thing we do every night'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+.. todo:: Add diagrams of how the feature modules would look like
+
+Thus, if a product configuration includes the `AddTodo` and `TodoDescription`
+features, FeatureHouse will merge these two feature files into one that contains
+the scenarios to be tested against that product configuration.
+
+In terms of running the tests, the product-specific feature files are output 
+into one directory for that specific product.  The test runner just needs to
+be pointed at this directory to find the tests for the customer.  No tag filtering
+is required.
+
+As it stands, this only makes the feature files variability-aware in the sense
+of variability by function.  Variability by control flow or variability by data
+can be achieved by duplication of test artifacts.
+
 
 Modeling scenario variability as crosscutting mechanisms
 ========================================================
 
-`An aspect-oriented approach to variability in use case scenarios <http://dl.acm.org/citation.cfm?id=1509239.1509258>`_ [Bonifacio2009]_.
+c.f. MSVCM [Bonifacio2009]_.
+
+The aspect-oriented approach provides a compositional approach with which to
+make the feature files variability-aware in terms of variability by control
+flow.
+
+It enables adding arbitrary scenario steps before and after existing scenario
+steps.
+
+.. todo:: Describe differences between homogenous and heterogenous crosscutting concerns.
 
 
 Aspectual feature modules
 =========================
 
 A combination of the feature module and aspect-oriented approaches.
+
+The combination allows variability-awareness in terms of variability by function,
+variability by control flow, and variability by data.
 
 
 Summary
