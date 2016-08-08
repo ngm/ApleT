@@ -2,6 +2,21 @@
 Variability-awareness techniques for BDD
 ****************************************
 
+In this section we discuss ways in which the components of BDD can be made
+variability-aware.  There are a variety of ways to do it, with no silver bullet
+that fits for all circumstances and contexts.  For example, while one approach
+may be more sophisticated, it may simply have too much of a learning overhead
+for a small project.  Hence we categorise and evaluate each approach against
+the quality criteria to enable informed decisions to be made.  
+
+With all approaches we make the assumption that we wish to avoid, as much as we
+can, overloading existing Gherkin language constructs.  The existing keywords
+and structures should keep the same function as they have for single-system
+engineering, and we should add variability-awareness to Gherkin without
+confusing what these single-system concepts mean.  The exception to this is the
+tags concept -- which is a very open and general-purpose concept in Gherkin, so
+nothing is lost or confused by using tags for variability purposes.
+
 
 Build system
 ============
@@ -76,7 +91,61 @@ scenarios that apply for the new customer.
 Note that as tagging an entire feature means that all scenarios are also
 tagged with the same tag, we must only tag at the scenario level.
 
+At the Gherkin-level, variability by control flow and variability by data can
+only be achieved by duplicating scenarios.  At the step definition level,
+step definitions are reusable between scenarios through parameterisation.
+
 c.f. PLUC
+
+Categorisation
+--------------
+
+* Annotation-based
+* Language-based
+
+Quality criteria
+----------------
+
++-------------------------------------+--------+----------------------------------------------+
+| Criteria                            | Rating | Notes                                        |
++=====================================+========+==============================================+
+| *Preplanning effort*                | Good   | We don't need to think much about            |
+|                                     |        | variability in advance. If a new feature     |
+|                                     |        | comes along, we tag it with all the          |
+|                                     |        | customers that it applies to.                |
++-------------------------------------+--------+----------------------------------------------+
+| *Feature traceability*              | Poor   | If scenarios from multiple feature files are |
+|                                     |        | related to one particular feature in the     |
+|                                     |        | feature model, there is no simple way of     |
+|                                     |        | determining that they all relate to one      |
+|                                     |        | feature.                                     |
++-------------------------------------+--------+----------------------------------------------+
+| *Separation of concerns*            | Poor   | Feature files contain all variants.          |
+|                                     |        | Variability concerns are hardcoded into the  |
+|                                     |        | feature files.                               |
++-------------------------------------+--------+----------------------------------------------+
+| *Information hiding*                | ...    |                                              |
++-------------------------------------+--------+----------------------------------------------+
+| *Granularity/variability-awareness* | Poor   | We can only select at the scenario- level.   |
+|                                     |        | Only variability by function is possible     |
+|                                     |        | without duplication.                         |
++-------------------------------------+--------+----------------------------------------------+
+| *Uniformity*                        | Poor   | There is no effect on step definition code.  |
+|                                     |        | It is all included, and selected for by the  |
+|                                     |        | selection of scenarios at the Gherkin-level. |
++-------------------------------------+--------+----------------------------------------------+
+| *Learning effort*                   | Good   | No changes to Gherkin.  Simply requires      |
+|                                     |        | tagging scenarios with the customers to      |
+|                                     |        | which they apply.                            |
++-------------------------------------+--------+----------------------------------------------+
+| *Overhead*                          | Poor   | There is duplication of scenarios. When a    |
+|                                     |        | new product/customer is added, we have to    |
+|                                     |        | manually amend all the feature files to tag  |
+|                                     |        | the scenarios we should be including in      |
+|                                     |        | their requirements and their tests.          |
++-------------------------------------+--------+----------------------------------------------+
+
+
 
 
 Annotation by feature
@@ -116,9 +185,14 @@ filter the test runner by the names of the selected features from the
 feature model.
 
 Note that without introducing new constructs and corresponding tooling, the
-tagging approach only affords us variability by function.  It would be possible
-to do so allow variability by control flow, or variability by data with new tag
-constructs and amendments to Gherkin.  For example:
+tagging approach only affords us variability-awareness for variability by
+function.  
+
+.. todo:: Discuss Scenario Outlines with respect to variability by data
+
+It would be possible to do so allow variability by control flow, or
+variability by data with new tag constructs and amendments to Gherkin.  For
+example:
 
 .. code-block:: gherkin
 
@@ -133,6 +207,9 @@ But this would require introducing new ways in which to mark up Gherkin files
 which is something we would like to avoid, where possible.
 
 c.f. PLUSS [Eriksson2005]_
+
+
+
 
 Feature module composition
 ==========================
@@ -160,7 +237,7 @@ To enable Gherkin for usage within FeatureHouse we are implementing a
 *feature structure tree* grammar for Gherkin files.
 
 .. code-block:: gherkin
-    :caption: AddTodo.feature in AddTodo feature module
+    :caption: `AddTodo.feature` in AddTodo feature module
 
     Feature: Add Todo
 
@@ -175,7 +252,7 @@ To enable Gherkin for usage within FeatureHouse we are implementing a
         Then the user should prompted to add a label
 
 .. code-block:: gherkin
-    :caption: AddTodo.feature in TodoDescription feature module
+    :caption: `AddTodo.feature` in TodoDescription feature module
 
     Feature: Add Todo
 
