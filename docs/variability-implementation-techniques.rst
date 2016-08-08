@@ -42,7 +42,6 @@ with the name of the customer(s) to which it applies.
 
 .. code-block:: gherkin
 
-    @customer1 @customer2
     Feature: Add Todo
 
     @customer1 @customer2
@@ -54,7 +53,7 @@ with the name of the customer(s) to which it applies.
     @customer2
     Scenario: User adds a todo with a description
         Given the user has input the label 'Take over the world'
-        And the user has input the description 'Same as every night'
+        And the user has input the description 'Same thing we do every night'
         When the user submits the todo
         Then the todo should be added to the user's todolist
 
@@ -68,17 +67,70 @@ This simplifies the running of the tests from the build scripts.
 We only need to pass the product/customer name as a filter to the tests, and 
 the test runner will run only the scenarios that apply to this product/customer.
 
-However, with this approach, all variability is contained implicitly within the 
+With this approach, all variability is contained implicitly within the 
 feature files.  There is no explicit representation of variability in a 
 variability model.  Any configuration of the product line for a particular
 customer means going through each feature file and tagging the features and
 scenarios that apply for the new customer.
+
+Note that as tagging an entire feature means that all scenarios are also
+tagged with the same tag, we must only tag at the scenario level.
 
 c.f. PLUC
 
 
 Annotation by feature
 =====================
+
+An alternative annotation-based approach is to tag features/scenarios
+with the corresponding name of the feature from the variability model.
+
+.. code-block:: gherkin
+
+    @add_todo
+    Feature: Add Todo
+
+    Scenario: User adds valid todo
+        Given the user has input the label 'Take over the world'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    @todo_description
+    Scenario: User adds a todo with a description
+        Given the user has input the label 'Take over the world'
+        And the user has input the description 'Same thing we do every night'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    Scenario: User adds invalid todo
+        Given the user has left the label blank
+        When the user submits the todo
+        Then the user should prompted to add a label
+
+Variability itself has now been moved away from the feature files
+themselves, and can be modelled and configured using a dedicated 
+feature modelling tool.
+
+In order to run the tests for a particular product configuration, we
+filter the test runner by the names of the selected features from the
+feature model.
+
+Note that without introducing new constructs and corresponding tooling, the
+tagging approach only affords us variability by function.  It would be possible
+to do so allow variability by control flow, or variability by data with new tag
+constructs and amendments to Gherkin.  For example:
+
+.. code-block:: gherkin
+
+    Scenario: User adds valid todo
+        Given the user has input the label '<<<LABEL>>>'
+        @todo_description 
+        And the user has input the description '<<<DESCRIPTION>>>'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+But this would require introducing new ways in which to mark up Gherkin files
+which is something we would like to avoid, where possible.
 
 c.f. PLUSS [Eriksson2005]_
 
