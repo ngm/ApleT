@@ -79,6 +79,7 @@ and their representation througout the entire software lifecycle.
    :caption: Web Application Product Lines
    :maxdepth: 2
 
+   multi-tenancy
    dotnet-webapp-productlines
    other-webapp-productlines
 
