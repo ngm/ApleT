@@ -17,6 +17,13 @@ confusing what these single-system concepts mean.  The exception to this is the
 tags concept -- which is a very open and general-purpose concept in Gherkin, so
 nothing is lost or confused by using tags for variability purposes.
 
+We refer back to the :ref:`quality criteria <variability-concepts-qualitycriteria>`
+discussed earlier.
+
+In the interests of the uniformity criteria, we take inspiration from the
+various mechanisms defined for code implementation, and see how they may
+apply to specs and to test artifacts.
+
 
 Build system
 ============
@@ -209,6 +216,36 @@ which is something we would like to avoid, where possible.
 c.f. PLUSS [Eriksson2005]_
 
 
+Quality criteria
+----------------
+
++-------------------------------------+---------+----------------------------------------------+
+| Criteria                            | Rating  | Notes                                        |
++=====================================+=========+==============================================+
+| *Preplanning effort*                | Good    |                                              |
++-------------------------------------+---------+----------------------------------------------+
+| *Feature traceability*              | Poor    |                                              |
++-------------------------------------+---------+----------------------------------------------+
+| *Separation of concerns*            | Poor    | Feature files contain all variants.          |
+|                                     |         | Variability concerns are hardcoded into the  |
+|                                     |         | feature files.                               |
++-------------------------------------+---------+----------------------------------------------+
+| *Information hiding*                | ...     |                                              |
++-------------------------------------+---------+----------------------------------------------+
+| *Granularity/variability-awareness* | Poor    | We can only select at the scenario- level.   |
+|                                     |         | Only variability by function is possible     |
+|                                     |         | without duplication.                         |
++-------------------------------------+---------+----------------------------------------------+
+| *Uniformity*                        | Poor    | There is no effect on step definition code.  |
+|                                     |         | It is all included, and selected for by the  |
+|                                     |         | selection of scenarios at the Gherkin-level. |
++-------------------------------------+---------+----------------------------------------------+
+| *Learning effort*                   | Good    | No changes to Gherkin.  Simply requires      |
+|                                     |         | tagging scenarios with the customers to      |
+|                                     |         | which they apply.                            |
++-------------------------------------+---------+----------------------------------------------+
+| *Overhead*                          | Neutral | There is duplication of scenarios.           |
++-------------------------------------+---------+----------------------------------------------+
 
 
 Feature module composition
@@ -317,6 +354,30 @@ based on various quality criteria.
 +------------------+--------------+-------------------+--------------------------------------------------+
 | *Learning curve* | Simple       | Simple            | Understanding feature module packaging mechanism |
 +------------------+--------------+-------------------+--------------------------------------------------+
+
+As far as ApleT goes, we would recommend starting out with
+something that has a low preplanning effort, low overhead,
+and low learning effort.  Then refactoring towards
+more advanced techniques.  
+
+We would recommend avoiding clone-and-own by version
+control unless you are already doing it, or it
+is desirable for some other reason (organisationl issues
+say).  We'd recommend starting with annotation by feature,
+although this does require somewhere recording feature
+configurations for each customers (this doesn't necessarily
+have to be through a feature modelling tool, however, it
+could simply be manually maintained text files.)
+
+
+
+
+
+
+
+
+
+
 
 
 .. rubric:: References

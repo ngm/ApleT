@@ -54,4 +54,20 @@ Artifact dependencies
 
 .. todo:: artifacts dependencies
 
+
+.. _sple-types-of-process:
+
+Types of process
+================
+
+* Proactive
+
+* Reactive
+
+* Extractive
+
+.. todo:: types of process
+
+
+
 .. rubric: References
