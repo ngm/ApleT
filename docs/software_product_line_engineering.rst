@@ -21,6 +21,30 @@ Variability model
 =================
 .. todo:: variability model
 
+
+
+.. _binding-times:
+
+Binding times
+=============
+
+The binding time is at which point the mechanism for distinguishing between
+variants of a feature come into play. The binding time might be compile-time,
+load-time or run-time.
+
+An example of compile-time binding would be preprocessor directives, that
+conditionally include or exclude code at the point of compiling the
+application.
+
+An example of a load-time binding implementation mechanism would be conditional
+execution of code via paramaterisation, where the selected value of the
+parameter is loading from a configuration file.
+
+Run-time binding can take into account real-time changes in the context of the
+application.
+
+
+
 .. _artifact-dependencies:
 
 Artifact dependencies

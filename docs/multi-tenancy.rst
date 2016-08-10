@@ -8,7 +8,8 @@ application.
 
 All of the work on software product lines implementation applies to
 multi-tenancy.  Most multi-tenant sites can be viewed as software
-product lines, with the individual product being defined at load-time.
+product lines, with the individual product being defined at 
+:ref:`load-time <binding-times>`.
 
 Resources
 =========
