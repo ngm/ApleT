@@ -9,11 +9,69 @@ reduce defects, costs, and time to market by a factor of 10 or more. SPLE is
 desirable in small- to medium-sized enterprises, where a common occurrence is
 the introduction of a one-off product that proves to be popular, and over time
 requires multiple customer-specific versions. However, in its more traditional
-form (the proactive approach, with a focus on the long-term up-front domain
+form (the `proactive <sple-types-of-approach>` approach, with a focus on the long-term up-front domain
 engineering phase), SPLE is not always viable for SMEs. Agile product line
 engineering (APLE), the combination of SPLE and agile software development, is
 a reactive approach to facilitating SPLE in SMEs that can cut down the
 long-term investment of the domain engineering phase.
+
+----
+
+Software product line engineering (SPLE) is a systematic approach to achieving
+software reuse. The main goal of SPLE is to enable software vendors to
+efficiently tailor software products to the requirements of individual
+customers[Apel2013]. It aims to minimise the overheads incurred when building a
+family of software products that have significant shared features, yet various
+differences. SPLE and its reuse-oriented methodology has many advantages, both
+financial and technical, and a number of industrial case studies document the
+successes it can bring [Linden2007]_ [SoftwareEngineeringInstitute]_. 
+
+The analogy from which SPLE takes its name is that of product lines in
+manufacturing, such as those found in the automobile industry. Before the
+advent of mass production in traditional manufacturing, goods were hand-crafted
+-- each item was produced individually, in a time-consuming and labour
+intensive manner, but nonetheless one that allowed for individual tailoring.
+The onset of industrialisation brought with it mass production -- whereby,
+through standardization of parts and processes, the time-to-market of an
+individual product was greatly reduced. This came with a loss of customisation,
+however. To overcome this, the idea of mass customization was introduced.
+Through the intelligent use of reusable core components and points where
+variations can be introduced, a wider portfolio of products can be produced
+while still reaping the benefits of mass production. In this context, a product
+line is a family of related products that can be built from reusable parts, and
+which have many commonalities with some variabilities between them.
+
+A similar history of early hand-crafting, followed by a move to mass
+production, followed by the need for mass customization, can be seen in
+software development. Software was originally hand-crafted to companies and to
+hardware. As the demand for computers grew, standard software was produced that
+could run on multiple architectures, which as with manufactoring reduced the
+temporal and financial overheads of bespoke tailoring. The parallel of the need
+for mass customization arises, however, with customers either unable or
+undesiring to run exactly the same software. Efficiently produced, but
+individually customised, software was required. SPLE is the field of research
+and practice that has grown to meet that requirement.
+
+The idea of software product families was first documented by Parnas
+[Parnas1976]_. SPLE has been researched in increasing depth over the past two
+decades. Its use in industry has also increased, beginning with larger
+businesses such as Boeing, Hewlett-Packard, and LG, and latterly making inroads
+into smaller enterprises [Pohl2005]_. It is by no means only for commercial usage --
+the open-source Linux kernel, for example, which must run on a vast array of
+hardwares and architectures, is one of the largest software product lines in
+existence. 
+
+The key benefits of SPLE are the reduced cost of new products, the reduced time
+to market of new products, the improved quality of products, and the
+facilitation of bespoke software. There are overheads associated with SPLE,
+however, which include the cost of the initial planning of the product line,
+and the extra complexity required in managing variability. These overheads, in
+combination with its relative newness, mean SPLE is not yet in widespread use
+in small- to medium-sized enterprises (SMEs) [Laguna2009]_. Efforts
+exist to bring the benefits of SPLE to companies less able to accomodate its
+large up-front analysis times [Krueger2002a]_ [Ghanam2009]_ [McGregor2008]_.
+
+
 
 .. _variability-model:
 
