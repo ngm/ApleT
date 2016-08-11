@@ -55,16 +55,54 @@ Artifact dependencies
 .. todo:: artifacts dependencies
 
 
+.. _sple-process:
+SPLE Process
+============
+
+SPLE is commonly split into *domain engineering* and *application engineering*.
+A traditional process model for SPLE [Apel2013]_ breaks the work into a two
+dimensional space, with problem space and solution space making up one axis,
+and domain engineering and application engineering making up the other, and
+with four main clusters of tasks in traditional SPLE are:
+
+* Domain analysis - this is requirements engineering for an entire product
+  line.  The results of domain analysis are often documented in a `feature
+  model <feature-model>`.
+
+* Requirements analysis - the needs of a specific customer as part of
+  application engineering
+
+* Domain implementation - developing reusable artifacts that correspond to the
+  features identified in domain analysis
+
+* Product derivation - the production step of application engineering, where
+  reusable artifacts are combined according to the results of requiement
+
+
 .. _sple-types-of-process:
-
 Types of process
-================
+----------------
 
-* Proactive
+There are three broad ways in which an organisation can undertake product
+line engineering: these are the *proactive*, *extractive*, and *reactive* approaches 
+[Krueger2002a]_.
 
-* Reactive
+* Proactive: The proactive approach is the more traditional approach to SPLE,
+  where complete domain analysis and variability management is performed in
+  advance of any application engineering.  In many small- to medium-sized
+  enterprises the large upfront costs of this approach mean it is not viable
+  [Buhrdorf2004]_.
 
-* Extractive
+* Reactive: In contrast, the reactive approach involves creating and updating
+  the product line as and when new members of the family appear.  Extensive
+  domain analysis is avoided, and time can be saved.  
+
+* Extractive: The extractive approach involves bootstrapping a product line by
+  taking existing products as the base for the core assets.  
+  
+The extractive and reactive approaches can be used together.
+
+
 
 .. todo:: types of process
 
