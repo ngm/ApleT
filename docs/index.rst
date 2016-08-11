@@ -87,6 +87,7 @@ and their representation througout the entire software lifecycle.
    :caption: Appendices 
    :maxdepth: 2
    
+   references
    todo
    notes
 
