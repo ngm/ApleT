@@ -17,6 +17,9 @@ long-term investment of the domain engineering phase.
 
 ----
 
+Overview
+========
+
 Software product line engineering (SPLE) is a systematic approach to achieving
 software reuse. The main goal of SPLE is to enable software vendors to
 efficiently tailor software products to the requirements of individual
@@ -25,6 +28,9 @@ family of software products that have significant shared features, yet various
 differences. SPLE and its reuse-oriented methodology has many advantages, both
 financial and technical, and a number of industrial case studies document the
 successes it can bring [Linden2007]_ [SoftwareEngineeringInstitute]_. 
+
+Hand-crafting vs mass customization
+-----------------------------------
 
 The analogy from which SPLE takes its name is that of product lines in
 manufacturing, such as those found in the automobile industry. Before the
@@ -52,6 +58,9 @@ undesiring to run exactly the same software. Efficiently produced, but
 individually customised, software was required. SPLE is the field of research
 and practice that has grown to meet that requirement.
 
+SPLE history
+------------
+
 The idea of software product families was first documented by Parnas
 [Parnas1976]_. SPLE has been researched in increasing depth over the past two
 decades. Its use in industry has also increased, beginning with larger
@@ -60,6 +69,9 @@ into smaller enterprises [Pohl2005]_. It is by no means only for commercial usag
 the open-source Linux kernel, for example, which must run on a vast array of
 hardwares and architectures, is one of the largest software product lines in
 existence. 
+
+Benefits
+--------
 
 The key benefits of SPLE are the reduced cost of new products, the reduced time
 to market of new products, the improved quality of products, and the
@@ -72,11 +84,13 @@ exist to bring the benefits of SPLE to companies less able to accomodate its
 large up-front analysis times [Krueger2002a]_ [Ghanam2009]_ [McGregor2008]_.
 
 
+Variability management
+======================
 
 .. _variability-model:
 
 Variability model
-=================
+-----------------
 .. todo:: variability model
 
 
@@ -159,11 +173,3 @@ line engineering: these are the *proactive*, *extractive*, and *reactive* approa
   taking existing products as the base for the core assets.  
   
 The extractive and reactive approaches can be used together.
-
-
-
-.. todo:: types of process
-
-
-
-.. rubric: References

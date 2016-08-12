@@ -80,6 +80,7 @@ and their representation througout the entire software lifecycle.
    :maxdepth: 2
 
    multi-tenancy
+   architecture
    dotnet-webapp-productlines
    other-webapp-productlines
 

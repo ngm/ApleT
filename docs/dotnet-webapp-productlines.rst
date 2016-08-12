@@ -8,6 +8,16 @@ This page is currently a general dumping ground for various
 ways of implementing variability/feature-oriented development
 when it comes to .NET web applications.
 
+* http://codeofrob.com/entries/multi-tenancy-in-asp.net-mvc---why-do-we-want-it.html
+* http://codeofrob.com/entries/multi-tenancy-in-asp.net-mvc---breaking-it-down.html
+* http://www.codeproject.com/Articles/842961/Introducing-Dynamic-Bundles-for-ASP-NET-MVC
+* https://github.com/achingono/Enfold
+* https://github.com/saaskit/saaskit
+* https://github.com/joeaudette/cloudscribe
+* http://www.aspnetboilerplate.com/Pages/Documents/Multi-Tenancy#multi-tenancy-in-aspnet-boilerplate
+* https://github.com/aspnet/Home/issues/973
+
+
 What needs composing in an ASP.NET MVC web application?
 =======================================================
 
@@ -42,9 +52,23 @@ As for controllers.
 View Templates
 --------------
 
-An extended ViewEngine can be written that allows for view overriding.  By
+One simple approach is extended ViewEngine that allows for view overriding.  By
 making use of partial views this allows overriding at quite a fine level of
 granularity.
+
+Note that the folder structure here has it broken down by customer/product.
+For branding concerns, we have to really think of branding as a feature variant
+that only applies to one customer.  So where the alternate views are for
+branding concerns, it's OK to have them separated out essentially 'by product'.
+
+In the case of views being required only for a particular functional feature,
+we might have a single view engine that searches for views in feature modules, or
+we could even experiment with a view engine being bundled with every feature and
+added to the collection of ViewEngines at application startup, based on product
+configuration.
+
+* http://lonetechie.com/2012/09/25/multi-tenant-architecture-with-asp-net-mvc-4/
+* http://codeofrob.com/entries/multi-tenancy-in-asp.net-mvc---views.html
 
 JavaScript
 ----------
