@@ -16,3 +16,4 @@ Resources
 
 * `Building Multi-Tenant Applications with Paul Stovell <http://dotnetrocks.com/?show=1332>`_
   is a really good discussion of the operations side of product lines.
+* `The Force.com Multitenant Architecture <https://developer.salesforce.com/page/Multi_Tenant_Architecture>`_
