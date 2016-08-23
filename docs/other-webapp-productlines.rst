@@ -10,4 +10,6 @@ Ruby on Rails
 -------------
 * http://www.sciencedirect.com/science/article/pii/S0167642311000025
 
-
+PHP/Symfony
+-----------
+* https://symfony.com/doc/current/bundles.html
