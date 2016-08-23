@@ -8,6 +8,10 @@ This page is currently a general dumping ground for various
 ways of implementing variability/feature-oriented development
 when it comes to .NET web applications.
 
+The comments of these posts are always worth a read for pros and cons.
+
+* dotnet core - https://scottsauber.com/2016/04/25/feature-folder-structure-in-asp-net-core/
+* https://josefottosson.se/c-sharp-mvc-with-feature-folders-example-in-episerver/
 * http://marisks.net/2016/02/16/feature-folders-vs-tech-folders/
 * http://timgthomas.com/2013/10/feature-folders-in-asp-net-mvc/
 * http://timgthomas.com/2013/10/feature-folders-and-javascript/
