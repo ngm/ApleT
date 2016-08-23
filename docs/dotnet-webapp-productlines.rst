@@ -8,6 +8,15 @@ This page is currently a general dumping ground for various
 ways of implementing variability/feature-oriented development
 when it comes to .NET web applications.
 
+* http://marisks.net/2016/02/16/feature-folders-vs-tech-folders/
+* http://timgthomas.com/2013/10/feature-folders-in-asp-net-mvc/
+* http://timgthomas.com/2013/10/feature-folders-and-javascript/
+* http://maxtoroq.github.io/2013/02/aspnet-mvc-workflow-per-controller.html
+* http://stackoverflow.com/a/1528571
+* https://github.com/T4MVC/T4MVC/wiki/Documentation#251-alternative-feature-folder-project-structure
+* http://www.chwe.at/2014/04/introducing-the-asp.net-mvc-feature-folders-project-structure/
+* https://spin.atomicobject.com/2015/11/18/feature-oriented-c-sharp-structure/
+
 * http://codeofrob.com/entries/multi-tenancy-in-asp.net-mvc---why-do-we-want-it.html
 * http://codeofrob.com/entries/multi-tenancy-in-asp.net-mvc---breaking-it-down.html
 * http://www.codeproject.com/Articles/842961/Introducing-Dynamic-Bundles-for-ASP-NET-MVC
