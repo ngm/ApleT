@@ -82,6 +82,24 @@ We'll put it in a folder called `Specifications` for now.
         When I mark the 'Buy milk' item as done
         Then the 'Buy milk' todo should be recorded as done in my list
 
+.. code-block:: gherkin
+
+    Feature: Add Todo
+
+        In order to keep track of the things I need to do
+        As a TodoMonkey
+        I want to add todo items to a todolist
+
+    Scenario: User adds valid todo
+        Given the user has input the label 'Take over the world'
+        When the user submits the todo
+        Then the todo should be added to the user's todolist
+
+    Scenario: User adds invalid todo
+        Given the user has left the label blank
+        When the user submits the todo
+        Then the user should prompted to add a label
+
 
 Build a product and get it tested
 ---------------------------------
@@ -114,6 +132,29 @@ such as FAKE.
     :align: center
 
 .. todo:: write the test execution code, here probably use browser automation
+
+.. code-block:: csharp
+
+    [Given("the user has input the label '(.*)'")] 
+    public void GivenTheUserHasInputTheLabel(string label) 
+    { 
+        ScenarioContext.Current.Set(label, "TodoLabel"); 
+    } 
+     
+    [When("the user submits the todo")] 
+    public void WhenTheUserSubmitsTheTodo() 
+    { 
+        var label = ScenarioContext.Current.Get("TodoLabel"); 
+     
+        var result = todoService.AddTodo(label); 
+    } 
+      
+    [Then("the todo should be added to the user's todolist")] 
+    public void ThenTheTodoShouldBeAddedToTheUsersTodolist() 
+    { 
+        result.ActionSuccessful.Should().BeTrue(); 
+    } 
+
 
 Progress report
 ---------------
