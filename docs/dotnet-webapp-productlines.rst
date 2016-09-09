@@ -8,7 +8,23 @@ This page is currently a general dumping ground for various
 ways of implementing variability/feature-oriented development
 when it comes to .NET web applications.
 
+Blog Posts
+==========
+
 The comments of these posts are always worth a read for pros and cons.
+
+* `ASP.NET Core - Feature Slices for ASP.NET Core MVC <https://msdn.microsoft.com/magazine/mt763233>`_
+
+Steve Smith outlines the steps needed to get a basic feature folder setup in ASP.NET Core MVC.
+He discusses how it can be achieved both with the built-in Areas functionality, or by rolling it
+yourself with an `IControllerModelConvention` and an `IViewLocationExpander`.  The main differences
+between the two are: Areas is built-in and requires minimal effort to get it working, however it's
+still quite 'folder-heavy'.  The custom Feature Folders approach require more effort to get working,
+however all artifacts are contained within one folder for each feature that is easier to navigate.
+Steve shows a way to combine both approaches, so you can have feature folders underneath Areas.
+This seems like a good way to keep Areas what they are for (separating out large distinct areas of
+an application), and still being able to have the parts of the Areas navigable by feature names rather
+than technologies.
 
 * dotnet core - https://scottsauber.com/2016/04/25/feature-folder-structure-in-asp-net-core/
 * https://josefottosson.se/c-sharp-mvc-with-feature-folders-example-in-episerver/
