@@ -1,3 +1,5 @@
+.. _bdd-variability-implementation-techniques:
+
 ****************************************
 Variability-awareness techniques for BDD
 ****************************************

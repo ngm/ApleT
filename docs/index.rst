@@ -70,6 +70,7 @@ and their representation througout the entire software lifecycle.
    :caption: Using ApleT
    :maxdepth: 2
 
+   aplet-overview
    aplet-process
    aplet-toolchain
    aplet-roles

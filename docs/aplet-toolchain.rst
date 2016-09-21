@@ -1,3 +1,5 @@
+.. _aplet-toolchain:
+
 *******************
 The ApleT Toolchain
 *******************
